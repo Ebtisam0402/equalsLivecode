@@ -14,10 +14,10 @@ public class App {
         Centroid locA = new Centroid(4, 9, "Salamander");
         Centroid locB = new Centroid(4, 9, "Salamander");
 
-        System.out.println("Result of locA == locB " + (locA == locB));
-        System.out.println("Result of locA.equals(locB) " + locA.equals(locB));
+        // System.out.println("Result of locA == locB " + (locA == locB));
+        // System.out.println("Result of locA.equals(locB) " + locA.equals(locB));
 
-        videoDemo();
+         videoDemo();
     }
 
     // We will look at this a bit later in the livecode, please ignore for first part
@@ -88,8 +88,8 @@ public class App {
         Set<Centroid> salamanderLocations = finder.allLocations(video, "Salamander");
         Set<Centroid> foodLocations = finder.allLocations(video, "Food");
 
-        System.out.println("Number of locations the salamander visited " + salamanderLocations.size());
-        System.out.println("Number of locations the food was at " + foodLocations.size());
+        System.out.println("Number of locations the salamander visited " + salamanderLocations.size()); //5
+        System.out.println("Number of locations the food was at " + foodLocations.size()); //1
 
         boolean hasOverlap = !Collections.disjoint(salamanderLocations, foodLocations);
         System.out.println("Do the salamander locations overlap with the food locations: " + hasOverlap);
